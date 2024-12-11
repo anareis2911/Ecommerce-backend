@@ -16,10 +16,13 @@ public class Produto {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @Column(name="description", length = 255)
+    @Column(name="descricao", length = 255)
     private String descricao;
 
     private float preco;
+
+    @Column(length = 255)
+    private String imageUrl;
 
     public int getId() {
         return id;
@@ -45,5 +48,10 @@ public class Produto {
     public void setPreco(float preco) {
         this.preco = preco;
     }
-    
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }
